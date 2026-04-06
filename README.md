@@ -1,8 +1,8 @@
 # 🧠 Student Burnout Tracker
 
-This project is a simple web app that helps students understand how their daily habits (sleep, study time, stress) can affect burnout.
+This project is a simple web app that helps students understand how their daily habits (sleep, study, stress) can affect burnout.
 
-I built this while learning full-stack development to connect a real-life problem with basic data analysis.
+I built this while learning full-stack development and wanted to connect a real-life problem with a simple web-based solution.
 
 ---
 
@@ -14,9 +14,9 @@ I built this while learning full-stack development to connect a real-life proble
   * Study hours
   * Stress level
 
-* Calculates a burnout score using a simple formula
+* Calculates a burnout score
 
-* Shows:
+* Displays:
 
   * Low burnout
   * Moderate burnout
@@ -26,13 +26,9 @@ I built this while learning full-stack development to connect a real-life proble
 
 ## 💡 Why I Built This
 
-During college, I noticed that students often feel tired or stressed but don’t track the reasons behind it.
+During college, I noticed that students often feel stressed but don’t track what causes it.
 
-This project is an attempt to:
-
-* Make those patterns visible
-* Give a rough idea of burnout
-* Encourage better habits
+This project helps visualize that connection in a simple way.
 
 ---
 
@@ -40,29 +36,22 @@ This project is an attempt to:
 
 * React (Vite)
 * Tailwind CSS
-* Node.js + Express (basic backend setup)
+* Node.js + Express (basic backend)
 
 ---
 
-## 📊 Burnout Logic
+## ⚙️ How to Run (Important)
 
-The score is calculated like this:
-
-burnout = (study × 1.5 + stress × 2) − sleep
-
-* More stress and study → higher burnout
-* More sleep → lower burnout
-
----
-
-## ⚙️ How to Run
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/aditya242007/student-burnout-tracker.git
 cd student-burnout-tracker
 ```
 
-Frontend:
+---
+
+### 2. Run Frontend
 
 ```bash
 cd client
@@ -70,35 +59,83 @@ npm install
 npm run dev
 ```
 
-Backend :
+👉 Open in browser:
+
+```
+http://localhost:5173
+```
+
+(or 5174 if port changes)
+
+---
+
+### 3. Fix Common Issue (Important ⚠️)
+
+If you see error related to **dompurify**:
+
+```
+Failed to resolve import "dompurify"
+```
+
+👉 Run:
 
 ```bash
-cd server
-npm install
-npm run dev
+npm install dompurify
 ```
 
 ---
 
-## ⚠️ Challenges I Faced
+### 4. Mac Permission Fix (if npm error comes)
 
-* Understanding how to manage form state in React
-* Designing a simple but meaningful scoring formula
-* Handling Git merge conflicts while pushing code
+If you get:
+
+```
+EACCES: permission denied
+```
+
+👉 Run:
+
+```bash
+sudo chown -R $(whoami) ~/.npm
+```
+
+Then again:
+
+```bash
+npm install
+```
+
+---
+
+## ⚠️ Issues I Faced
+
+* Dependency errors after running `npm audit fix --force`
+* Missing packages like `dompurify`
+* Git merge conflicts while pushing to GitHub
+* Port already in use issues
+
+---
+
+## 📊 Burnout Logic
+
+burnout = (study × 1.5 + stress × 2) − sleep
+
+* More stress & study → higher burnout
+* More sleep → lower burnout
 
 ---
 
 ## 📌 Future Improvements
 
-* Improve UI design
-* Add charts for better visualization
+* Add better UI
+* Add charts for visualization
 * Store user history
-* Improve accuracy of burnout calculation
+* Improve scoring logic
 
 ---
 
 ## 🙌 Final Thoughts
 
-This is a learning project where I focused more on understanding the logic and implementation rather than building a perfect system.
+This is a learning project focused on understanding real-world problems and implementing them step by step.
 
-Open to feedback and improvements.
+If you face any issue, feel free to raise it or suggest improvements.
