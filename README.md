@@ -1,96 +1,104 @@
-<<<<<<< HEAD
 # 🧠 Student Burnout Tracker
 
-An intelligent full-stack web app that analyzes student lifestyle data (sleep, study, stress, screen time) and predicts burnout levels with actionable recommendations.
+This project is a simple web app that helps students understand how their daily habits (sleep, study time, stress) can affect burnout.
 
-![React](https://img.shields.io/badge/React-19-blue) ![Vite](https://img.shields.io/badge/Vite-8-purple) ![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-cyan) ![Express](https://img.shields.io/badge/Express-4-green) ![MongoDB](https://img.shields.io/badge/MongoDB-8-darkgreen)
+I built this while learning full-stack development to connect a real-life problem with basic data analysis.
 
-## ✨ Features
+---
 
-- 📊 **Burnout Analysis** — Score calculation based on sleep, study, stress & screen time
-- 📈 **Data Visualization** — Bar, Pie, and Line charts using Recharts
-- 🤖 **Smart Recommendations** — AI-like personalized wellness tips
-- 📅 **History Tracking** — View and manage past entries
-- 📄 **PDF Export** — Download formatted burnout reports
-- 💬 **Wellness Chatbot** — Rule-based mental health tips bot
-- 🌙 **Dark Mode** — System-aware with manual toggle
-- 📱 **Fully Responsive** — Mobile + Desktop ready
+## 🚀 What It Does
+
+* Takes input:
+
+  * Sleep hours
+  * Study hours
+  * Stress level
+
+* Calculates a burnout score using a simple formula
+
+* Shows:
+
+  * Low burnout
+  * Moderate burnout
+  * High burnout
+
+---
+
+## 💡 Why I Built This
+
+During college, I noticed that students often feel tired or stressed but don’t track the reasons behind it.
+
+This project is an attempt to:
+
+* Make those patterns visible
+* Give a rough idea of burnout
+* Encourage better habits
+
+---
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                         |
-|-----------|------------------------------------|
-| Frontend  | React 19, Vite 8, Tailwind CSS v4 |
-| Charts    | Recharts                           |
-| Animation | Framer Motion                      |
-| Backend   | Node.js, Express                   |
-| Database  | MongoDB (optional, in-memory fallback) |
+* React (Vite)
+* Tailwind CSS
+* Node.js + Express (basic backend setup)
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
-- Node.js 18+
-- MongoDB (optional — app works without it)
+## 📊 Burnout Logic
 
-### Installation
+The score is calculated like this:
+
+burnout = (study × 1.5 + stress × 2) − sleep
+
+* More stress and study → higher burnout
+* More sleep → lower burnout
+
+---
+
+## ⚙️ How to Run
 
 ```bash
-# Clone the repo
-git clone https://github.com/YOUR_USERNAME/student-burnout-tracker.git
+git clone https://github.com/aditya242007/student-burnout-tracker.git
 cd student-burnout-tracker
-
-# Install frontend dependencies
-cd client && npm install
-
-# Install backend dependencies
-cd ../server && npm install
 ```
 
-### Running
+Frontend:
 
 ```bash
-# Terminal 1: Start backend
-cd server
-npm run dev
-
-# Terminal 2: Start frontend
 cd client
+npm install
 npm run dev
 ```
 
-- Frontend: http://localhost:5173
-- Backend: http://localhost:5001
+Backend (if used):
 
-## 📐 Burnout Formula
-
-```
-burnout_score = (study_hours × 1.5 + stress_level × 2 + screen_time × 1) − sleep_hours
-```
-
-| Score   | Level    |
-|---------|----------|
-| < 15    | 🟢 Low   |
-| 15–25   | 🟡 Moderate |
-| > 25    | 🔴 High  |
-
-## 📁 Project Structure
-
-```
-student-burnout-tracker/
-├── client/              # React frontend
-│   └── src/
-│       ├── components/  # Navbar, Form, Charts, etc.
-│       └── pages/       # Home, Dashboard
-└── server/              # Express backend
-    ├── models/          # Mongoose schema
-    ├── controllers/     # CRUD + burnout logic
-    ├── routes/          # API endpoints
-    └── utils/           # Scoring engine
+```bash
+cd server
+npm install
+npm run dev
 ```
 
-## 📝 License
+---
 
-MIT
-=======
-# student-burnout-tracker
->>>>>>> 3e0b6c90f96f7a92629ed7f8f20014e6a8b0ca03
+## ⚠️ Challenges I Faced
+
+* Understanding how to manage form state in React
+* Designing a simple but meaningful scoring formula
+* Handling Git merge conflicts while pushing code
+
+---
+
+## 📌 Future Improvements
+
+* Improve UI design
+* Add charts for better visualization
+* Store user history
+* Improve accuracy of burnout calculation
+
+---
+
+## 🙌 Final Thoughts
+
+This is a learning project where I focused more on understanding the logic and implementation rather than building a perfect system.
+
+Open to feedback and improvements.
