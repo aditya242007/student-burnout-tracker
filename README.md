@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 Student Burnout Tracker
 
 An intelligent full-stack web app that analyzes student lifestyle data (sleep, study, stress, screen time) and predicts burnout levels with actionable recommendations.
@@ -90,3 +91,6 @@ student-burnout-tracker/
 ## 📝 License
 
 MIT
+=======
+# student-burnout-tracker
+>>>>>>> 3e0b6c90f96f7a92629ed7f8f20014e6a8b0ca03
