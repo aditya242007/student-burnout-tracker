@@ -70,7 +70,7 @@ npm install
 npm run dev
 ```
 
-Backend (if used):
+Backend :
 
 ```bash
 cd server
